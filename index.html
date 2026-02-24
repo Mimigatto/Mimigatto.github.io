@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Monruethai Sueksakan | Portfolio</title>
+  <meta name="description" content="Portfolio tecnico: informatica, cybersecurity, OT, robotics, embedded.">
+
+  <style>
+    :root{
+      --bg:#0b0a10; --card:rgba(255,255,255,.06); --line:rgba(255,255,255,.12);
+      --txt:rgba(255,255,255,.88); --mut:rgba(255,255,255,.65);
+      --pink:#ff4da6; --vio:#b27bff; --r:18px; --max:1040px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--txt);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:
+        radial-gradient(1100px 700px at 12% 10%, rgba(255,77,166,.18), transparent 55%),
+        radial-gradient(1100px 700px at 88% 18%, rgba(178,123,255,.16), transparent 55%),
+        var(--bg);
+    }
+    a{color:inherit; text-decoration:none}
+    .container{width:min(var(--max), calc(100% - 40px)); margin:0 auto}
+    .nav{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(12px);
+      background: rgba(11,10,16,.65);
+      border-bottom:1px solid var(--line);
+    }
+    .navin{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:12px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800}
+    .dotlogo{
+      width:14px; height:14px; border-radius:999px;
+      background: linear-gradient(135deg,var(--pink),var(--vio));
+      box-shadow: 0 0 0 7px rgba(255,77,166,.12);
+    }
+    .links{display:flex; gap:10px; flex-wrap:wrap; color:var(--mut); font-size:14px}
+    .links a{padding:8px 10px; border-radius:999px; border:1px solid transparent}
+    .links a:hover{border-color:var(--line); background:rgba(255,255,255,.03); color:var(--txt)}
+    header{padding:46px 0 10px}
+    .hero{
+      border:1px solid var(--line); border-radius:24px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      padding:26px;
+    }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      border:1px solid var(--line); background:rgba(255,255,255,.03);
+      padding:8px 12px; border-radius:999px; color:var(--mut); font-size:13px;
+    }
+    h1{margin:14px 0 8px; font-size:clamp(28px,4vw,44px); letter-spacing:-.6px; line-height:1.08}
+    p{color:var(--mut); line-height:1.65}
+    section{padding:22px 0}
+    .title{display:flex; justify-content:space-between; gap:12px; align-items:baseline; margin-bottom:12px}
+    .title h2{margin:0; font-size:18px}
+    .title span{color:var(--mut); font-size:13px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .card{
+      border:1px solid var(--line); border-radius:var(--r);
+      background:rgba(255,255,255,.03); padding:18px;
+      transition:transform .12s ease, background .12s ease;
+    }
+    .card:hover{transform:translateY(-2px); background:rgba(255,255,255,.05)}
+    .card h3{margin:0 0 8px; font-size:15px}
+    .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{font-size:12px; padding:6px 9px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.03); color:rgba(255,255,255,.75)}
+    .smalllinks{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .smalllinks a{border-bottom:1px dashed rgba(255,255,255,.25); padding-bottom:2px; font-size:13px}
+    .smalllinks a:hover{border-bottom-color: rgba(255,77,166,.6)}
+    footer{border-top:1px solid var(--line); padding:20px 0 34px; color:var(--mut); margin-top:10px}
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} .links{display:none} }
+  </style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="container navin">
+    <div class="brand"><span class="dotlogo"></span> Mimigatto <span style="color:var(--mut);font-weight:700">· Portfolio</span></div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Progetti</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contatti</a>
+    </div>
+    <div class="links">
+      <a href="https://github.com/Mimigatto" target="_blank" rel="noopener">GitHub</a>
+      <!-- se metti il CV: assets/CV.pdf -->
+      <a href="assets/CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+  </div>
+</div>
+
+<header class="container">
+  <div class="hero" id="about">
+    <div class="kicker"><span class="dotlogo"></span> Informatica · Cybersecurity · OT · Robotics · Embedded</div>
+    <h1>Portfolio tecnico (UniVR + personale)<br/>con progetti reali su GitHub.</h1>
+    <p>
+      Qui trovi tutti i miei repository pubblici, più una pagina “single scroll” stile fwachter.github.io:
+      semplice, veloce, chiara per recruiter.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+  <section id="projects">
+    <div class="title">
+      <h2>Progetti (tutti i repo pubblici)</h2>
+      <span>auto-popolato da GitHub</span>
+    </div>
+    <div id="repoGrid" class="grid"></div>
+  </section>
+
+  <section id="skills">
+    <div class="title">
+      <h2>Skills</h2>
+      <span>metti 6–12 keyword forti</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Cybersecurity / OT</h3>
+        <p>Wireshark, scanning controllato, segmentation, hardening, basics IEC 62443.</p>
+        <div class="meta"><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">OT</span></div>
+      </div>
+      <div class="card">
+        <h3>Robotics</h3>
+        <p>Robot programming, simulazione, ROS/concetti, troubleshooting.</p>
+        <div class="meta"><span class="tag">Robotics</span><span class="tag">ROS</span></div>
+      </div>
+      <div class="card">
+        <h3>Software / Embedded</h3>
+        <p>Python, C/C++, Git, microcontrollori, integrazione sensori.</p>
+        <div class="meta"><span class="tag">Python</span><span class="tag">C/C++</span><span class="tag">Git</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="title">
+      <h2>Contatti</h2>
+      <span>semplice come nel sito di FWachter</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Email</h3>
+        <p>Scrivimi:</p>
+        <div class="smalllinks">
+          <a href="mailto:italianodoc1981@gmail.com">italianodoc1981@gmail.com</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Link</h3>
+        <p>GitHub / LinkedIn / demo.</p>
+        <div class="smalllinks">
+          <a href="https://github.com/Mimigatto" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" onclick="alert('Incolla qui il tuo LinkedIn'); return false;">LinkedIn</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Resume</h3>
+        <p>Carica un PDF in <code>assets/CV.pdf</code> e il bottone sopra funzionerà.</p>
+        <div class="smalllinks">
+          <a href="assets/CV.pdf" target="_blank" rel="noopener">Apri CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© <span id="y"></span> Mimigatto</div>
+    <div>Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // carica TUTTI i repo pubblici (fino a 100) da GitHub
+  const username = "Mimigatto";
+  const repoGrid = document.getElementById("repoGrid");
+
+  const niceName = (s) => s.replace(/[-_]/g," ").replace(/\b\w/g, c => c.toUpperCase());
+
+  async function loadRepos(){
+    repoGrid.innerHTML = `<div class="card"><h3>Caricamento…</h3><p>Sto leggendo i repo da GitHub.</p></div>`;
+    try{
+      const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`, {
+        headers: { "Accept": "application/vnd.github+json" }
+      });
+      if(!res.ok) throw new Error("GitHub API error: " + res.status);
+
+      let repos = await res.json();
+
+      // Filtri “puliti” (puoi toglierli se vuoi proprio TUTTO):
+      repos = repos.filter(r => !r.archived);
+
+      // Ordine “catalogo”: per nome (stile università)
+      repos.sort((a,b) => a.name.localeCompare(b.name));
+
+      repoGrid.innerHTML = "";
+      for (const r of repos){
+        const desc = r.description || "Aggiungi una description nel repo (About) per farlo sembrare super pro.";
+        const lang = r.language ? `<span class="tag">${r.language}</span>` : "";
+        const updated = new Date(r.updated_at).toLocaleDateString("it-IT");
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h3>${niceName(r.name)}</h3>
+          <p>${desc}</p>
+          <div class="meta">
+            ${lang}
+            <span class="tag">Updated: ${updated}</span>
+            ${r.fork ? `<span class="tag">Fork</span>` : ``}
+          </div>
+          <div class="smalllinks">
+            <a href="${r.html_url}" target="_blank" rel="noopener">Repo</a>
+            ${r.homepage ? `<a href="${r.homepage}" target="_blank" rel="noopener">Demo</a>` : ``}
+          </div>
+        `;
+        repoGrid.appendChild(card);
+      }
+    }catch(e){
+      repoGrid.innerHTML = `<div class="card"><h3>Errore</h3><p>${e.message}</p></div>`;
+    }
+  }
+  loadRepos();
+</script>
+</body>
+</html>
