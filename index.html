@@ -94,10 +94,9 @@
 <header class="container">
   <div class="hero" id="about">
     <div class="kicker"><span class="dotlogo"></span> Informatica · Cybersecurity · OT · Robotics · Embedded</div>
-    <h1>Portfolio tecnico (UniVR + personale)<br/>con progetti reali su GitHub.</h1>
+    <h1>Portfolio tecnico <br/>con progetti reali su GitHub.</h1>
     <p>
-      Qui trovi tutti i miei repository pubblici, più una pagina “single scroll” stile fwachter.github.io:
-      semplice, veloce, chiara per recruiter.
+      Qui trovi tutti i miei repository pubblici.
     </p>
   </div>
 </header>
@@ -138,8 +137,7 @@
   <section id="contact">
     <div class="title">
       <h2>Contatti</h2>
-      <span>semplice come nel sito di FWachter</span>
-    </div>
+          </div>
     <div class="grid">
       <div class="card">
         <h3>Email</h3>
@@ -201,7 +199,7 @@
 
       repoGrid.innerHTML = "";
       for (const r of repos){
-        const desc = r.description || "Aggiungi una description nel repo (About) per farlo sembrare super pro.";
+        const desc = r.description || "repo.";
         const lang = r.language ? `<span class="tag">${r.language}</span>` : "";
         const updated = new Date(r.updated_at).toLocaleDateString("it-IT");
 
